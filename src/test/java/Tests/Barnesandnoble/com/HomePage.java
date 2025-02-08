@@ -1,4 +1,4 @@
-package Tests;
+package Tests.Barnesandnoble.com;
 
 
 //import org.openqa.selenium.WebDriver;
