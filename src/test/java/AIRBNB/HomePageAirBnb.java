@@ -1,14 +1,17 @@
-package Tests.Barnesandnoble.com;
+package AIRBNB;
 
 
 //import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
-import org.openqa.selenium.*;
 
 import java.time.Duration;
 
-public class HomePage {
+public class HomePageAirBnb {
     public WebDriver driver;
     @Test
     public void testMethod(){
@@ -19,7 +22,7 @@ public class HomePage {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         // accesing a web page
-        driver.get("https://www.barnesandnoble.com/");
+        driver.get("https://www.airbnb.ie");
 
 
         // maximize browser
@@ -28,8 +31,8 @@ public class HomePage {
 
 //        identify by ID
 
-        WebElement bookButtonXpath = driver.findElement(By.id("rhfCategoryFlyout_Books"));
-        WebElement bookButtonCSS = driver.findElement(By.cssSelector("#rhfCategoryFlyout_Books"));
+//        WebElement bookButtonXpath = driver.findElement(By.id("rhfCategoryFlyout_Books"));
+//        WebElement bookButtonCSS = driver.findElement(By.cssSelector("#rhfCategoryFlyout_Books"));
 
 //        identify by HREF
 
@@ -37,7 +40,7 @@ public class HomePage {
 
 
 
-
+            driver.close();
 //        elementsMethods.clickOnElement(alertsFrameWindowsField);
     }
 
