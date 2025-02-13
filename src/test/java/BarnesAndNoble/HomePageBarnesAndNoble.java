@@ -30,6 +30,8 @@ public class HomePageBarnesAndNoble {
 //        Identify eBooks -> General Fiction element BY ID and XPATH
         WebElement eBookElement = driver.findElement(By.id("rhfCategoryFlyout_eBooks"));
         eBookElement.click();
+//        Identify elements using Chrome inspector
+//      WebElement generalFictionElement = driver.findElement(By.xpath(               "//*[@id="navbarSupportedContent"]/div/ul/li[4]/div/div/div[1]/div/div[3]/div/dd/a[1]"));
         WebElement generalFictionElement = driver.findElement(By.xpath("//*[@id='navbarSupportedContent']/div/ul/li[4]//div[1]/div/div[3]//a[1]"));
         generalFictionElement.click();
 
