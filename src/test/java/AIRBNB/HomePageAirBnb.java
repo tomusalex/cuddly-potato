@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+import java.util.List;
 
 public class HomePageAirBnb {
     public WebDriver driver;
@@ -29,20 +30,28 @@ public class HomePageAirBnb {
         driver.manage().window().maximize();
 
 
-//        identify by ID
+//        Create a list with all the WebElements
 
-//        WebElement bookButtonXpath = driver.findElement(By.id("rhfCategoryFlyout_Books"));
-//        WebElement bookButtonCSS = driver.findElement(By.cssSelector("#rhfCategoryFlyout_Books"));
+        List<WebElement> elementsList = driver.findElements(By.xpath("//input[@name='categoryScroller']"));
 
-//        identify by HREF
-
-
-
+        selectElementFromListByText(elementsList, "Bed & breakfasts");
+        selectElementFromListByText(elementsList,"Domes");
+        selectElementFromListByText(elementsList,"Islands");
 
 
-            driver.close();
-//        elementsMethods.clickOnElement(alertsFrameWindowsField);
+
+
+
+//            driver.close();
+
     }
 
+    public void selectElementFromListByText(List<WebElement> elementsList , String value){
+        for (int i=0; i<elementsList.size(); i++){
+            if (elementsList.get(i).getText().equals(value)){
+               elementsList.get(i).click();
+            }
+        }
+    }
 
 }
