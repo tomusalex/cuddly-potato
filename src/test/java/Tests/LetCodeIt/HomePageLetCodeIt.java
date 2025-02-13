@@ -1,7 +1,5 @@
 package Tests.LetCodeIt;
 
-
-//import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DriverCommand;
@@ -45,10 +43,6 @@ public class HomePageLetCodeIt {
         selectAndFillElementFromListByAttribute(elementsList, "state", "Romania");
         selectAndFillElementFromListByAttribute(elementsList, "postalcode", "400234");
 
-
-//        selectElementFromListByText(elementsList, "Last Name");
-//        selectElementFromListByText(elementsList, "Email");
-
 //        identify COUNTRY CODE
 
         WebElement countryCode = driver.findElement(By.xpath("//label[@id='countrycode']/parent::*"));
@@ -56,11 +50,11 @@ public class HomePageLetCodeIt {
         WebElement countryCodeChild = countryCode.findElement(By.xpath("//option[@data-countrycode='DZ']"));
         clickOnElement(countryCodeChild);
 
-        //        Alternative method COUNTRY CODE
+        //        Alternative method COUNTRY CODE element
 //        WebElement countryCodeChild = driver.findElement(By.xpath("//option[@data-countrycode='DZ']"));
 //        clickOnElement(countryCodeChild);
 
-//        identify COUNTRY
+//        identify COUNTRY element
 
         WebElement country = driver.findElement(By.xpath("//label[@id='country']/parent::*"));
 
@@ -75,8 +69,7 @@ public class HomePageLetCodeIt {
         datePicker.sendKeys("12.12.2024");
 
 
-
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("window.scrollBy(0,250)");
 
         WebElement genderOption = driver.findElement(By.cssSelector("#trans"));
@@ -95,7 +88,7 @@ public class HomePageLetCodeIt {
         submitButton.click();
 
 //        WebElement succesTitle = driver.findElement(By.xpath("//h1[text()=' LetCode with Koushik ']"));
-//      Assert.assertEquals(succesTitle.getText()," LetCode with Koushik ");
+//        Assert.assertEquals(succesTitle.getText()," LetCode with Koushik ");
 
 
 //    driver.close();
@@ -117,7 +110,4 @@ public class HomePageLetCodeIt {
 
     }
 }
-//    public void fillElement(WebElement element, String value){
-//        element.sendKeys(value);
-//    }
 

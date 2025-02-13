@@ -1,8 +1,6 @@
 package BarnesAndNoble;
 
 
-//import org.openqa.selenium.WebDriver;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,12 +11,11 @@ import java.time.Duration;
 
 public class HomePageBarnesAndNoble {
     public WebDriver driver;
+
     @Test
-    public void testMethod(){
+    public void testMethod() {
         // open a browser
         driver = new ChromeDriver();
-//        elementsMethods = new ElementsMethods(driver);
-//        javaScriptMethods = new JavaScriptMethods();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         // accesing a web page
@@ -29,19 +26,13 @@ public class HomePageBarnesAndNoble {
         driver.manage().window().maximize();
 
 
-//        identify by ID
+//        Identify eBooks -> General Fiction element
 
-        WebElement bookButtonXpath = driver.findElement(By.id("rhfCategoryFlyout_Books"));
-        WebElement bookButtonCSS = driver.findElement(By.cssSelector("#rhfCategoryFlyout_Books"));
-
-//        identify by HREF
-
-
-
+        WebElement generalFictionElement = driver.findElement(By.xpath())
 
 
         driver.close();
-//        elementsMethods.clickOnElement(alertsFrameWindowsField);
+
     }
 
 
