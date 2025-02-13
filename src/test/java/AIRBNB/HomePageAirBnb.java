@@ -25,10 +25,13 @@ public class HomePageAirBnb {
         // maximize browser
         driver.manage().window().maximize();
 
-
-//        Create a list with all the WebElements
+//      Identify Tiny House
+//        WebElement tinyHouseELement = driver.findElement(By.xpath("//*[@id='categoryScroller']//div[3]//label[7]/div/span/div/span"));
+//
+//      Create a list with all the WebElements
 
         List<WebElement> elementsList = driver.findElements(By.xpath("//input[@name='categoryScroller']"));
+
 
         selectElementFromListByText(elementsList, "Bed & breakfasts");
         selectElementFromListByText(elementsList, "Domes");
